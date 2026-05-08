@@ -37,6 +37,22 @@
             min-height: 100vh;
             line-height: 1.6;
         }
+        
+        /* 视频保护：禁用选中和拖拽 */
+        video {
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: auto;
+        }
+        .card-screenshot {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .card-screenshot * {
+            -webkit-user-drag: none;
+        }
 
         /* Header */
         .header {
@@ -1713,6 +1729,63 @@
         let top50Data = [];
         let analysisComplete = false;
         
+        // ============================================
+        // 视频防下载保护（防君子不防小人，能挡住95%普通用户）
+        // ============================================
+        (function setupVideoProtection() {
+            // 1) 拦截快捷键
+            document.addEventListener('keydown', function(e) {
+                // F12 开发者工具
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+S / Cmd+S 保存页面
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+U / Cmd+U 查看源代码
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+I / Cmd+Option+I 开发者工具
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'i') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+J / Cmd+Option+J Console
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'j') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+C / Cmd+Option+C 检查元素
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'c') {
+                    e.preventDefault();
+                    return false;
+                }
+            }, true);
+            
+            // 2) 在视频区禁用右键（其他区域保留，方便复制prompt等）
+            document.addEventListener('contextmenu', function(e) {
+                // 若目标在视频或视频容器内，阻止右键
+                if (e.target.tagName === 'VIDEO' || 
+                    (e.target.closest && e.target.closest('.card-screenshot'))) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // 3) 禁用视频拖拽
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'VIDEO' || e.target.tagName === 'SOURCE') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+        
         // Initialize page
         document.addEventListener('DOMContentLoaded', async function() {
             await loadData();
@@ -2010,9 +2083,12 @@
                 videoHtml = `
                     <video 
                         controls 
+                        controlsList="nodownload noplaybackrate noremoteplayback"
+                        disablePictureInPicture
                         preload="auto" 
                         playsinline
                         muted
+                        oncontextmenu="return false;"
                         style="width:100%; height:100%; object-fit:contain; background:#000;"
                         poster="${item.thumbnail || ''}"
                         onloadedmetadata="this.currentTime = 1;"
@@ -2024,9 +2100,6 @@
                     <div class="screenshot-placeholder" style="display:none; width:100%; height:100%;">
                         <i class="fas fa-film"></i>
                         <span style="font-size:12px;margin-top:8px;">视频源暂不可用</span>
-                        <a href="${item.videoUrl}" target="_blank" style="font-size:11px;color:var(--accent-purple);margin-top:6px;text-decoration:none;">
-                            尝试新窗口打开 →
-                        </a>
                     </div>
                 `;
             } else if (item.thumbnail) {
