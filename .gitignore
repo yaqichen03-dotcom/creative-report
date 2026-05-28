@@ -1,12 +1,28 @@
 # 视频文件（体积太大，不上传GitHub）
 data/videos/
 data/screenshots/
+data-shop/videos/
+data-shop/screenshots/
 
 # CSV原始文件（含业务敏感数据）
 data/*.csv
+data-shop/*.csv
 
 # 备份文件
 data/*_backup.json
+data-shop/*_backup.json
+
+# 后端代码（避免泄漏 API key 历史；只部署前端 + JSON）
+# server.py 和 analyze.py 现在用环境变量，但保险起见也不上传后端
+# （如果要上传，注释掉这两行）
+server.py
+analyze.py
+
+# 环境变量与密钥
+.env
+.env.local
+*.key
+*.pem
 
 # 服务器日志
 *.log

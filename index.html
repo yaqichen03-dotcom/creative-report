@@ -1904,7 +1904,7 @@
             
             // 回退：尝试本地后端（开发环境才有）
             try {
-                const response = await fetch('http://localhost:8765/insights');
+                const response = await fetch('http://localhost:8765/insights?profile=live');
                 if (response.ok) {
                     const result = await response.json();
                     if (result.points && result.points.length > 0) {
@@ -1946,7 +1946,7 @@
             `;
             
             try {
-                const response = await fetch('http://localhost:8765/generate-insights', {
+                const response = await fetch('http://localhost:8765/generate-insights?profile=live', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ videos: top50Data, force: true })
@@ -2458,7 +2458,7 @@
             
             // 检查是否有正在运行的任务
             try {
-                const response = await fetch('http://localhost:8765/progress');
+                const response = await fetch('http://localhost:8765/progress?profile=live');
                 if (response.ok) {
                     const state = await response.json();
                     if (state.status === 'running' || (state.videos && state.videos.length > 0 && state.status !== 'idle')) {
@@ -2656,7 +2656,7 @@
                 document.getElementById('progressStatusMsg').textContent = '正在上传CSV到服务器...';
                 
                 // 发送到本地Python服务器
-                const response = await fetch('http://localhost:8765/analyze-csv', {
+                const response = await fetch('http://localhost:8765/analyze-csv?profile=live', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -2712,7 +2712,7 @@
         // 轮询进度
         async function pollProgress() {
             try {
-                const response = await fetch('http://localhost:8765/progress');
+                const response = await fetch('http://localhost:8765/progress?profile=live');
                 if (!response.ok) return;
                 
                 const state = await response.json();
