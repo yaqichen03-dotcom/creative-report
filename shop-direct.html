@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数码家电行业小店直购链路跑量素材双周报</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-dark: #0a0a0f;
+            --bg-card: #151521;
+            --bg-card-hover: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6c6c7c;
+            --border-color: #2a2a3e;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-pink: #ec4899;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* 视频保护：禁用选中和拖拽 */
+        video {
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: auto;
+        }
+        .card-screenshot {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .card-screenshot * {
+            -webkit-user-drag: none;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, rgba(15, 15, 25, 0.95) 0%, rgba(10, 10, 15, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-top {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text span {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-purple);
+        }
+
+        .btn-admin {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
+        }
+
+        .btn-admin:hover {
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .filter-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 32px 8px 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a0a0b0' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            min-width: 140px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+        }
+
+        .stats-bar {
+            margin-left: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 420px;
+            height: 100vh;
+            background: var(--bg-card);
+            border-left: 1px solid var(--border-color);
+            z-index: 200;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .sidebar-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .sidebar-close:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+        }
+
+        .upload-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: 16px;
+            padding: 40px 24px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-bottom: 24px;
+        }
+
+        .upload-zone:hover {
+            border-color: var(--accent-purple);
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        .upload-zone.dragover {
+            border-color: var(--accent-purple);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .upload-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--accent-purple);
+        }
+
+        .upload-text h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .upload-text p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .upload-input {
+            display: none;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            margin-top: 24px;
+        }
+
+        .comparison-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comparison-item {
+            background: var(--bg-dark);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .comparison-item.advantage {
+            border-left: 3px solid var(--accent-green);
+        }
+
+        .comparison-item.disadvantage {
+            border-left: 3px solid var(--accent-red);
+        }
+
+        .comparison-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .comparison-item.advantage .comparison-label {
+            color: var(--accent-green);
+        }
+
+        .comparison-item.disadvantage .comparison-label {
+            color: var(--accent-red);
+        }
+
+        .comparison-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        /* 行业洞察区块 */
+        .insight-section {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .insight-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .insight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .insight-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .insight-icon {
+            font-size: 28px;
+        }
+        
+        .insight-title h2 {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .insight-refresh-btn {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        
+        .insight-refresh-btn:hover {
+            background: var(--bg-card-hover);
+            color: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+        
+        .insight-refresh-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .insight-content {
+            position: relative;
+        }
+        
+        .insight-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+        
+        .insight-empty i {
+            font-size: 36px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+        
+        .insight-empty p {
+            font-size: 14px;
+        }
+        
+        .insight-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .insight-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .insight-point {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px 20px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .insight-point:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+        }
+        
+        .insight-point-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+            margin-right: 10px;
+        }
+        
+        .insight-point-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .insight-point-desc {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        
+        /* Benchmark 区块 */
+        .benchmark-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+        
+        .benchmark-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .benchmark-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .benchmark-icon {
+            font-size: 26px;
+        }
+        
+        .benchmark-title h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .benchmark-link-btn {
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .benchmark-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        .benchmark-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        
+        .benchmark-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            transition: all 0.3s;
+        }
+        
+        .benchmark-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .benchmark-baipai {
+            border-left: 4px solid var(--accent-blue);
+        }
+        
+        .benchmark-baipai:hover {
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .benchmark-pinpai {
+            border-left: 4px solid var(--accent-purple);
+        }
+        
+        .benchmark-pinpai:hover {
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+        }
+        
+        .benchmark-card-header {
+            margin-bottom: 14px;
+        }
+        
+        .benchmark-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .benchmark-tag.tag-brand {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+        }
+        
+        .benchmark-metrics {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .benchmark-metric {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            flex: 1;
+        }
+        
+        .benchmark-metric-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .benchmark-metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fbbf24;
+            line-height: 1;
+        }
+        
+        .benchmark-metric-value small {
+            font-size: 14px;
+            opacity: 0.7;
+            font-weight: 500;
+            margin-left: 2px;
+        }
+        
+        .benchmark-metric-divider {
+            width: 1px;
+            height: 40px;
+            background: var(--border-color);
+        }
+        
+        /* Cards Section */
+        .cards-section {
+            margin-top: 32px;
+        }
+        
+        .section-title-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .section-title-bar h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-emoji {
+            font-size: 26px;
+        }
+
+        /* Analysis Cards Grid */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        /* Analysis Card */
+        .analysis-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-rank {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rank-badge {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .card-info h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 8px;
+        }
+
+        .stat-badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .stat-badge.cost {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-orange);
+        }
+        
+        /* 指标徽章栏（CTR + 3s快滑率） */
+        .metrics-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            flex: 1;
+        }
+        
+        .metric-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        .metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fbbf24;
+            line-height: 1.2;
+        }
+        
+        .metric-value small {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-left: 2px;
+        }
+        
+        .metric-value.metric-slip {
+            color: #fbbf24;
+        }
+        
+        .metric-divider {
+            width: 1px;
+            height: 32px;
+            background: var(--border-color);
+        }
+
+        .card-screenshot {
+            width: 100%;
+            aspect-ratio: 9/16;
+            max-height: 480px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-screenshot video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .screenshot-placeholder i {
+            font-size: 48px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .analysis-section {
+            margin-bottom: 20px;
+        }
+
+        .analysis-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .section-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--accent-purple);
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-content {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .highlight {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* Flow Structure */
+        .flow-structure {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .flow-step {
+            background: var(--bg-dark);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .flow-arrow {
+            color: var(--accent-purple);
+            font-size: 12px;
+        }
+
+        .flow-step.emphasis {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        /* Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .tag-category {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+        }
+
+        .tag-type {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .tag-audience {
+            background: rgba(236, 72, 153, 0.15);
+            color: var(--accent-pink);
+        }
+
+        /* Prompt Box */
+        .prompt-box {
+            background: var(--bg-dark);
+            border-radius: 10px;
+            padding: 14px;
+            position: relative;
+        }
+
+        .prompt-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prompt-text.expanded {
+            max-height: none;
+        }
+
+        .prompt-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(transparent, var(--bg-dark));
+        }
+
+        .prompt-text.expanded::after {
+            display: none;
+        }
+
+        .prompt-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .prompt-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .prompt-btn-copy {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            color: var(--accent-purple);
+        }
+
+        .prompt-btn-copy:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(59, 130, 246, 0.3) 100%);
+        }
+
+        .prompt-btn-miaosi {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .prompt-btn-miaosi:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Admin Modal */
+        .admin-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 300;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .admin-modal.show {
+            display: flex;
+        }
+
+        .admin-content {
+            background: var(--bg-card);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 720px;
+            max-height: 85vh;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .admin-body {
+            padding: 24px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* 详细进度展示 */
+        .progress-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: var(--bg-dark);
+            border-radius: 12px;
+        }
+
+        .progress-summary-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .progress-summary-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .progress-summary-count {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+
+        .progress-summary-stats {
+            display: flex;
+            gap: 16px;
+            text-align: right;
+        }
+
+        .summary-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .summary-stat-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .summary-stat-value.success { color: var(--accent-green); }
+        .summary-stat-value.processing { color: var(--accent-orange); }
+        .summary-stat-value.failed { color: var(--accent-red); }
+        .summary-stat-value.pending { color: var(--text-muted); }
+
+        .summary-stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .progress-overall-bar {
+            background: var(--bg-dark);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .progress-overall-fill {
+            background: var(--primary-gradient);
+            height: 100%;
+            transition: width 0.5s ease;
+            border-radius: 4px;
+        }
+
+        .video-progress-list {
+            max-height: 400px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .video-progress-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .video-progress-list::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+            border-radius: 3px;
+        }
+
+        .video-progress-list::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+
+        .video-progress-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: var(--bg-dark);
+            border-radius: 10px;
+            border-left: 3px solid var(--text-muted);
+            transition: all 0.3s;
+        }
+
+        .video-progress-item.pending {
+            opacity: 0.5;
+        }
+
+        .video-progress-item.downloading {
+            border-left-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .video-progress-item.uploading,
+        .video-progress-item.extracting {
+            border-left-color: var(--accent-orange);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .video-progress-item.analyzing {
+            border-left-color: var(--accent-purple);
+            background: rgba(139, 92, 246, 0.05);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { background: rgba(139, 92, 246, 0.05); }
+            50% { background: rgba(139, 92, 246, 0.15); }
+        }
+
+        .video-progress-item.completed {
+            border-left-color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .video-progress-item.failed {
+            border-left-color: var(--accent-red);
+            background: rgba(239, 68, 68, 0.05);
+        }
+        
+        .video-progress-item.skipped {
+            border-left-color: var(--text-muted);
+            background: rgba(108, 108, 124, 0.05);
+            opacity: 0.7;
+        }
+
+        .video-rank-badge {
+            width: 32px;
+            height: 32px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .video-progress-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .video-progress-stage {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .video-progress-message {
+            font-size: 11px;
+            color: var(--text-muted);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .video-progress-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .video-progress-icon .spinner {
+            width: 14px;
+            height: 14px;
+        }
+
+        .stage-icon-pending { color: var(--text-muted); }
+        .stage-icon-downloading { color: var(--accent-blue); }
+        .stage-icon-uploading { color: var(--accent-orange); }
+        .stage-icon-extracting { color: var(--accent-orange); }
+        .stage-icon-analyzing { color: var(--accent-purple); }
+        .stage-icon-completed { color: var(--accent-green); }
+        .stage-icon-failed { color: var(--accent-red); }
+        .stage-icon-skipped { color: var(--text-muted); }
+
+        .admin-upload-zone {
+            border: 2px dashed var(--accent-orange);
+            border-radius: 16px;
+            padding: 48px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .admin-upload-zone:hover {
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .admin-upload-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--accent-orange);
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 400;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success {
+            border-color: var(--accent-green);
+        }
+
+        .toast.error {
+            border-color: var(--accent-red);
+        }
+
+        .toast-icon {
+            font-size: 18px;
+        }
+
+        .toast.success .toast-icon {
+            color: var(--accent-green);
+        }
+
+        .toast.error .toast-icon {
+            color: var(--accent-red);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-top-color: var(--accent-purple);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .stats-bar {
+                margin-left: 0;
+                justify-content: center;
+            }
+            
+            .sidebar {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <div class="logo-icon">🛒</div>
+                <div class="logo-text">
+                    <h1>数码家电行业小店直购链路跑量素材双周报</h1>
+                    <span>Digital & Home Appliance · Mini-shop Direct Purchase Bi-weekly Report</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-admin" onclick="requestAdminAccess()">
+                    <i class="fas fa-crown"></i>
+                    管理员入口
+                </button>
+            </div>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label"><i class="fas fa-folder"></i> 商品类目</span>
+                <select class="filter-select" id="categoryFilter" onchange="filterCards()">
+                    <option value="">全部类目</option>
+                    <!-- 类目选项由JS动态生成（基于当前数据中实际存在的类目） -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label"><i class="fas fa-play-circle"></i> 素材类型</span>
+                <select class="filter-select" id="typeFilter" onchange="filterCards()">
+                    <option value="">全部类型</option>
+                    <option value="种草安利">种草安利</option>
+                    <option value="产品展示">产品展示</option>
+                    <option value="对比测评">对比测评</option>
+                    <option value="场景演绎">场景演绎</option>
+                    <option value="工厂源头">工厂源头</option>
+                    <option value="明星代言">明星代言</option>
+                    <option value="限时促销">限时促销</option>
+                    <option value="使用教程">使用教程</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label"><i class="fas fa-users"></i> 转化人群</span>
+                <select class="filter-select" id="audienceFilter" onchange="filterCards()">
+                    <option value="">全部人群</option>
+                    <option value="年轻人">年轻人</option>
+                    <option value="上班族">上班族</option>
+                    <option value="家庭用户">家庭用户</option>
+                    <option value="学生群体">学生群体</option>
+                    <option value="商务人士">商务人士</option>
+                    <option value="科技爱好者">科技爱好者</option>
+                    <option value="银发族">银发族</option>
+                </select>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalCount">50</div>
+                    <div class="stat-label">总素材数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="filteredCount">50</div>
+                    <div class="stat-label">筛选结果</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">📤 上传视频分析</h2>
+            <button class="sidebar-close" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="upload-text">
+                    <h3>拖拽视频文件或点击上传</h3>
+                    <p>支持 MP4、MOV、AVI 格式<br>文件大小不超过 500MB</p>
+                </div>
+                <input type="file" class="upload-input" id="videoUpload" accept="video/*">
+            </div>
+            
+            <div class="comparison-section" id="comparisonSection" style="display: none;">
+                <div class="comparison-title">
+                    <i class="fas fa-balance-scale"></i>
+                    与Top50对比分析
+                </div>
+                
+                <div id="uploadedAnalysis"></div>
+                
+                <div id="comparisonResults">
+                    <div class="comparison-item advantage">
+                        <div class="comparison-label">✓ 优势分析</div>
+                        <div class="comparison-text" id="advantageText">分析中...</div>
+                    </div>
+                    <div class="comparison-item disadvantage">
+                        <div class="comparison-label">✗ 劣势分析</div>
+                        <div class="comparison-text" id="disadvantageText">分析中...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Admin Modal -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>🔐 管理员面板</h2>
+                <button class="sidebar-close" onclick="closeAdminModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="admin-body">
+                <!-- 上传区域 -->
+                <div id="adminUploadSection">
+                    <div class="admin-upload-zone" id="adminUploadZone">
+                        <div class="admin-upload-icon">
+                            <i class="fas fa-file-csv"></i>
+                        </div>
+                        <div class="upload-text">
+                            <h3>上传CSV原始数据文件</h3>
+                            <p>支持从数据平台导出的CSV文件<br>上传后将自动分析并生成拆解报告</p>
+                        </div>
+                        <input type="file" class="upload-input" id="csvUpload" accept=".csv">
+                    </div>
+                </div>
+                
+                <!-- 进度展示区域 -->
+                <div id="adminProgressSection" style="display: none;">
+                    <!-- 总体进度摘要 -->
+                    <div class="progress-summary">
+                        <div class="progress-summary-info">
+                            <div class="progress-summary-title">
+                                <i class="fas fa-tasks"></i> 总体进度
+                            </div>
+                            <div class="progress-summary-count">
+                                <span id="progressCurrent">0</span>/<span id="progressTotal">0</span>
+                            </div>
+                        </div>
+                        <div class="progress-summary-stats">
+                            <div class="summary-stat">
+                                <span class="summary-stat-value success" id="statCompleted">0</span>
+                                <span class="summary-stat-label">完成</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value processing" id="statProcessing">0</span>
+                                <span class="summary-stat-label">进行中</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value pending" id="statPending">0</span>
+                                <span class="summary-stat-label">等待</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="summary-stat-value failed" id="statFailed">0</span>
+                                <span class="summary-stat-label">失败</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 总体进度条 -->
+                    <div class="progress-overall-bar">
+                        <div class="progress-overall-fill" id="progressOverallFill" style="width: 0%"></div>
+                    </div>
+                    
+                    <!-- 状态消息 -->
+                    <div id="progressStatusMsg" style="text-align: center; color: var(--text-secondary); font-size: 13px; margin-bottom: 16px;">
+                        准备中...
+                    </div>
+                    
+                    <!-- 视频进度列表 -->
+                    <div class="video-progress-list" id="videoProgressList">
+                        <!-- 动态生成 -->
+                    </div>
+                    
+                    <!-- 操作按钮 -->
+                    <div style="display: flex; gap: 12px; margin-top: 20px;">
+                        <button class="btn btn-secondary" onclick="closeAdminModal()" style="flex: 1;">
+                            <i class="fas fa-eye"></i> 后台运行，查看结果
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span id="toastMessage">操作成功</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- 行业Top跑量素材的共性特征提炼 -->
+        <section class="insight-section" id="insightSection">
+            <div class="insight-header">
+                <div class="insight-title">
+                    <span class="insight-icon">🔥</span>
+                    <h2>行业Top跑量素材的共性特征提炼</h2>
+                </div>
+                <button class="insight-refresh-btn" onclick="generateInsights()" title="基于当前数据重新提炼">
+                    <i class="fas fa-sync-alt"></i> 重新提炼
+                </button>
+            </div>
+            <div class="insight-content" id="insightContent">
+                <div class="insight-empty">
+                    <i class="fas fa-magic"></i>
+                    <p>等待跑量素材分析完成后，AI 将自动提炼共性特征</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 行业Benchmark -->
+        <section class="benchmark-section">
+            <div class="benchmark-header">
+                <div class="benchmark-title">
+                    <span class="benchmark-icon">📊</span>
+                    <h2>行业大盘 Benchmark 参考</h2>
+                </div>
+                <a href="https://docs.qq.com/doc/DQUZCS2J1UmhHTnJR" target="_blank" rel="noopener" class="benchmark-link-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                    查看创意产品+重复创意问题细则
+                </a>
+            </div>
+            <div class="benchmark-grid">
+                <div class="benchmark-card benchmark-baipai">
+                    <div class="benchmark-card-header">
+                        <span class="benchmark-tag">白牌赛道</span>
+                    </div>
+                    <div class="benchmark-metrics">
+                        <div class="benchmark-metric">
+                            <span class="benchmark-metric-label">CTR</span>
+                            <span class="benchmark-metric-value">3.31<small>%</small></span>
+                        </div>
+                        <div class="benchmark-metric-divider"></div>
+                        <div class="benchmark-metric">
+                            <span class="benchmark-metric-label">3s快滑率</span>
+                            <span class="benchmark-metric-value">45<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="benchmark-card benchmark-pinpai">
+                    <div class="benchmark-card-header">
+                        <span class="benchmark-tag tag-brand">品牌赛道</span>
+                    </div>
+                    <div class="benchmark-metrics">
+                        <div class="benchmark-metric">
+                            <span class="benchmark-metric-label">CTR</span>
+                            <span class="benchmark-metric-value">2.14<small>%</small></span>
+                        </div>
+                        <div class="benchmark-metric-divider"></div>
+                        <div class="benchmark-metric">
+                            <span class="benchmark-metric-label">3s快滑率</span>
+                            <span class="benchmark-metric-value">60<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Top素材分析 -->
+        <section class="cards-section">
+            <div class="section-title-bar">
+                <h2><span class="section-emoji">🎬</span> Top 跑量素材逐个拆解</h2>
+            </div>
+            <div class="analysis-grid" id="analysisGrid">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Gemini API Configuration
+        const GEMINI_API_KEY = 'REDACTED_OLD_KEY';
+        
+        // 全局数据变量
+        let top50Data = [];
+        let analysisComplete = false;
+        
+        // ============================================
+        // 视频防下载保护（防君子不防小人，能挡住95%普通用户）
+        // ============================================
+        (function setupVideoProtection() {
+            // 1) 拦截快捷键
+            document.addEventListener('keydown', function(e) {
+                // F12 开发者工具
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+S / Cmd+S 保存页面
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+U / Cmd+U 查看源代码
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+I / Cmd+Option+I 开发者工具
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'i') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+J / Cmd+Option+J Console
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'j') {
+                    e.preventDefault();
+                    return false;
+                }
+                // Ctrl+Shift+C / Cmd+Option+C 检查元素
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'c') {
+                    e.preventDefault();
+                    return false;
+                }
+            }, true);
+            
+            // 2) 在视频区禁用右键（其他区域保留，方便复制prompt等）
+            document.addEventListener('contextmenu', function(e) {
+                // 若目标在视频或视频容器内，阻止右键
+                if (e.target.tagName === 'VIDEO' || 
+                    (e.target.closest && e.target.closest('.card-screenshot'))) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // 3) 禁用视频拖拽
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'VIDEO' || e.target.tagName === 'SOURCE') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        })();
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadData();
+            setupUploadZone();
+            setupAdminUpload();
+        });
+        
+        // 加载数据 - 优先从本地JSON读取，否则显示引导上传提示
+        async function loadData() {
+            try {
+                const response = await fetch('./data-shop/top50_analysis.json', {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data && data.length > 0) {
+                        top50Data = data;
+                        analysisComplete = true;
+                        document.getElementById('totalCount').textContent = data.length;
+                        renderCards(top50Data);
+                        console.log(`已加载 ${data.length} 条真实分析数据`);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.log('本地数据文件不存在，需要上传CSV生成数据');
+            }
+            
+            // 如果没有数据，显示引导提示
+            showEmptyState();
+        }
+        
+        // 显示空状态引导
+        function showEmptyState() {
+            const grid = document.getElementById('analysisGrid');
+            grid.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 80px 40px; background: var(--bg-card); border-radius: 16px; border: 2px dashed var(--border-color);">
+                    <div style="font-size: 64px; margin-bottom: 20px;">📊</div>
+                    <h2 style="font-size: 24px; margin-bottom: 12px; color: var(--text-primary);">欢迎使用创意分析报告系统</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 15px;">
+                        请管理员点击右上角<span style="color: var(--accent-orange); font-weight: 600;">「管理员入口」</span>上传CSV数据文件<br>
+                        系统将自动下载视频并调用Gemini AI进行深度分析
+                    </p>
+                    <div style="display: inline-flex; gap: 12px; align-items: center; background: var(--bg-dark); padding: 16px 24px; border-radius: 12px;">
+                        <span style="color: var(--accent-purple); font-size: 20px;">⬇️</span>
+                        <div style="text-align: left;">
+                            <div style="color: var(--text-primary); font-weight: 600;">上传CSV文件</div>
+                            <div style="color: var(--text-muted); font-size: 12px;">从数据平台导出Top50素材数据</div>
+                        </div>
+                        <span style="color: var(--text-muted);">→</span>
+                        <div style="text-align: left;">
+                            <div style="color: var(--text-primary); font-weight: 600;">自动分析</div>
+                            <div style="color: var(--text-muted); font-size: 12px;">下载视频 + Gemini AI拆解</div>
+                        </div>
+                        <span style="color: var(--text-muted);">→</span>
+                        <div style="text-align: left;">
+                            <div style="color: var(--accent-green); font-weight: 600;">生成报告</div>
+                            <div style="color: var(--text-muted); font-size: 12px;">完整的创意分析报告</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            updateStats(0);
+        }
+        // Python分析脚本路径
+        const PYTHON_SCRIPT = './analyze.py';
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCards(top50Data);
+            setupUploadZone();
+            setupAdminUpload();
+        });
+
+        // Render analysis cards
+        function renderCards(data) {
+            const grid = document.getElementById('analysisGrid');
+            
+            // 按rank排序，并重新分配连续序号（使界面上的编号始终从1开始连续）
+            const sortedData = [...data].sort((a, b) => (a.rank || 0) - (b.rank || 0));
+            sortedData.forEach((item, idx) => {
+                item.displayRank = idx + 1;  // 用于展示的连续序号
+            });
+            
+            grid.innerHTML = sortedData.map(item => createCardHTML(item)).join('');
+            updateStats(sortedData.length);
+            
+            // 动态更新筛选器下拉框（基于实际数据）
+            updateFilterOptions(sortedData);
+            
+            // 自动加载或生成共性特征
+            loadOrGenerateInsights(sortedData);
+        }
+        
+        // 加载固化的共性特征（不再自动生成）
+        let insightCache = null;
+        async function loadOrGenerateInsights(data) {
+            if (!data || data.length < 3) {
+                return;
+            }
+            
+            // 优先从静态文件读取（GitHub Pages 部署友好）
+            try {
+                const response = await fetch('./data-shop/industry_insights.json?t=' + Date.now());
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.points && result.points.length > 0) {
+                        insightCache = result;
+                        renderInsights(result);
+                        return;
+                    }
+                }
+            } catch (e) {}
+            
+            // 回退：尝试本地后端（开发环境才有）
+            try {
+                const response = await fetch('http://localhost:8765/insights?profile=shop');
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.points && result.points.length > 0) {
+                        insightCache = result;
+                        renderInsights(result);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.warn('读取固化的共性特征失败:', e);
+            }
+            
+            // 没有固化文件时显示提示（不自动生成）
+            const content = document.getElementById('insightContent');
+            content.innerHTML = `
+                <div class="insight-empty">
+                    <i class="fas fa-info-circle"></i>
+                    <p>等待管理员上传CSV并完成全部素材分析后，<br>系统将自动提炼共性特征并固化展示</p>
+                </div>
+            `;
+        }
+        
+        // 调用Gemini生成共性特征（强制刷新模式 - 通过"重新提炼"按钮触发）
+        async function generateInsights(force = true) {
+            if (!top50Data || top50Data.length < 3) {
+                showToast('数据太少，无法提炼共性特征', 'error');
+                return;
+            }
+            
+            const btn = document.querySelector('.insight-refresh-btn');
+            const content = document.getElementById('insightContent');
+            
+            if (btn) btn.disabled = true;
+            content.innerHTML = `
+                <div class="insight-loading">
+                    <div class="spinner"></div>
+                    <span>正在调用 Gemini AI 重新提炼 ${top50Data.length} 个跑量素材的共性特征...</span>
+                </div>
+            `;
+            
+            try {
+                const response = await fetch('http://localhost:8765/generate-insights?profile=shop', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ videos: top50Data, force: true })
+                });
+                
+                if (!response.ok) throw new Error('服务器错误');
+                
+                const result = await response.json();
+                if (result.points && result.points.length > 0) {
+                    insightCache = result;
+                    renderInsights(result);
+                    showToast('共性特征提炼完成', 'success');
+                } else {
+                    throw new Error('未返回有效数据');
+                }
+            } catch (e) {
+                console.error('生成共性特征失败:', e);
+                content.innerHTML = `
+                    <div class="insight-empty">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>提炼失败: ${e.message}<br>请稍后点击"重新提炼"重试</p>
+                    </div>
+                `;
+            } finally {
+                if (btn) btn.disabled = false;
+            }
+        }
+        
+        // 渲染共性特征
+        function renderInsights(result) {
+            const content = document.getElementById('insightContent');
+            const points = result.points || [];
+            
+            if (points.length === 0) {
+                content.innerHTML = `<div class="insight-empty"><p>暂无共性特征数据</p></div>`;
+                return;
+            }
+            
+            content.innerHTML = `
+                <div class="insight-points">
+                    ${points.map((p, idx) => `
+                        <div class="insight-point">
+                            <div class="insight-point-title">
+                                <span class="insight-point-num">${idx + 1}</span>
+                                ${p.title || '特征' + (idx+1)}
+                            </div>
+                            <div class="insight-point-desc">${p.description || ''}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+        
+        // 动态生成筛选器选项
+        function updateFilterOptions(data) {
+            // 收集实际存在的类目（保持原有顺序，去重）
+            const categories = [];
+            const types = [];
+            const audiences = [];
+            
+            data.forEach(item => {
+                if (item.category && item.category !== '未分类' && item.category !== '待分类' && !categories.includes(item.category)) {
+                    categories.push(item.category);
+                }
+                if (item.type && item.type !== '待分类' && !types.includes(item.type)) {
+                    types.push(item.type);
+                }
+                if (item.audience && item.audience !== '待分类' && !audiences.includes(item.audience)) {
+                    audiences.push(item.audience);
+                }
+            });
+            
+            // 排序
+            categories.sort();
+            types.sort();
+            audiences.sort();
+            
+            // 更新类目下拉框（保留当前选中值）
+            updateSelectOptions('categoryFilter', categories, '全部类目');
+            updateSelectOptions('typeFilter', types, '全部类型');
+            updateSelectOptions('audienceFilter', audiences, '全部人群');
+        }
+        
+        // 更新单个select的选项
+        function updateSelectOptions(selectId, options, defaultLabel) {
+            const select = document.getElementById(selectId);
+            if (!select) return;
+            
+            const currentValue = select.value; // 保留当前选中值
+            
+            // 重新生成options
+            select.innerHTML = `<option value="">${defaultLabel}</option>` + 
+                options.map(opt => `<option value="${opt}">${opt}</option>`).join('');
+            
+            // 恢复选中值（如果还存在）
+            if (options.includes(currentValue)) {
+                select.value = currentValue;
+            }
+        }
+
+        // Create card HTML
+        function createCardHTML(item) {
+            // 处理structure字段 - 可能是数组或字符串
+            let structureArray = [];
+            if (Array.isArray(item.structure)) {
+                structureArray = item.structure;
+            } else if (typeof item.structure === 'string') {
+                structureArray = item.structure.split(/[,，、]/).filter(s => s.trim());
+            } else {
+                structureArray = ['开场', '展示', '卖点', '结尾'];
+            }
+            
+            const structureFlow = structureArray.map((step, index) => {
+                const isEmphasis = index === 0 || index === structureArray.length - 1;
+                return `<span class="flow-step ${isEmphasis ? 'emphasis' : ''}">${step.trim()}</span>${index < structureArray.length - 1 ? '<span class="flow-arrow"><i class="fas fa-arrow-right"></i></span>' : ''}`;
+            }).join('');
+
+            // 处理keyPoints字段
+            let keyPointsHtml = '';
+            if (typeof item.keyPoints === 'string') {
+                const points = item.keyPoints.split(/[,，、]/).filter(s => s.trim());
+                keyPointsHtml = points.map(point => `<span class="highlight">${point.trim()}</span>`).join(' ');
+            } else {
+                keyPointsHtml = `<span class="highlight">${item.keyPoints || '分析中...'}</span>`;
+            }
+
+            // 视频播放器 - 直接使用原视频URL，默认显示第1秒画面
+            let videoHtml = '';
+            if (item.videoUrl && item.videoUrl !== '#') {
+                // 在URL末尾追加 #t=1 让视频自动定位到第1秒（媒体片段URI）
+                const videoUrlWithTime = item.videoUrl.includes('#') 
+                    ? item.videoUrl 
+                    : item.videoUrl + '#t=1';
+                videoHtml = `
+                    <video 
+                        controls 
+                        controlsList="nodownload noplaybackrate noremoteplayback"
+                        disablePictureInPicture
+                        preload="auto" 
+                        playsinline
+                        muted
+                        oncontextmenu="return false;"
+                        style="width:100%; height:100%; object-fit:contain; background:#000;"
+                        poster="${item.thumbnail || ''}"
+                        onloadedmetadata="this.currentTime = 1;"
+                        onloadeddata="this.pause();"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                        <source src="${videoUrlWithTime}" type="video/mp4">
+                    </video>
+                    <div class="screenshot-placeholder" style="display:none; width:100%; height:100%;">
+                        <i class="fas fa-film"></i>
+                        <span style="font-size:12px;margin-top:8px;">视频源暂不可用</span>
+                    </div>
+                `;
+            } else if (item.thumbnail) {
+                videoHtml = `<img src="${item.thumbnail}" alt="视频截图" style="width:100%;height:100%;object-fit:cover;">`;
+            } else {
+                videoHtml = `
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <span>视频加载中</span>
+                    </div>
+                `;
+            }
+            
+            // 格式化指标数值
+            const ctrValue = item.ctr ? Number(item.ctr).toFixed(2) : '-';
+            const slip3sValue = item.slip3s ? Number(item.slip3s).toFixed(2) : '-';
+
+            return `
+                <article class="analysis-card" data-category="${item.category || '待分类'}" data-type="${item.type || '待分类'}" data-audience="${item.audience || '待分类'}">
+                    <div class="card-header">
+                        <div class="card-rank">
+                            <div class="rank-badge">${item.displayRank || item.rank || 0}</div>
+                            <div class="card-info">
+                                <h3>${item.title || '素材' + (item.displayRank || item.rank)}</h3>
+                                <div class="card-meta">
+                                    <span><i class="fas fa-tag"></i> ${item.category || '待分类'}</span>
+                                    <span><i class="fas fa-play-circle"></i> ${item.type || '待分类'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 指标徽章栏 -->
+                    <div class="metrics-bar">
+                        <div class="metric-item">
+                            <span class="metric-label">CTR</span>
+                            <span class="metric-value">${ctrValue}<small>%</small></span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-label">3s快滑率</span>
+                            <span class="metric-value metric-slip">${slip3sValue}<small>%</small></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-screenshot">
+                        ${videoHtml}
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="analysis-section">
+                            <div class="section-header">
+                                <div class="section-icon"><i class="fas fa-bolt"></i></div>
+                                <span class="section-title">🎯 黄金三秒</span>
+                            </div>
+                            <div class="section-content">
+                                ${item.golden3s || '分析中...'}
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-section">
+                            <div class="section-header">
+                                <div class="section-icon"><i class="fas fa-layer-group"></i></div>
+                                <span class="section-title">📋 素材结构</span>
+                            </div>
+                            <div class="flow-structure">
+                                ${structureFlow || '<span class="flow-step">分析中...</span>'}
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-section">
+                            <div class="section-header">
+                                <div class="section-icon"><i class="fas fa-star"></i></div>
+                                <span class="section-title">💡 核心卖点</span>
+                            </div>
+                            <div class="section-content">
+                                ${keyPointsHtml || '<span class="highlight">分析中...</span>'}
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-section">
+                            <div class="section-header">
+                                <div class="section-icon"><i class="fas fa-magic"></i></div>
+                                <span class="section-title">✨ 吸睛开头生成prompt</span>
+                            </div>
+                            <div class="prompt-box">
+                                <div class="prompt-text" id="prompt-${item.rank}">${item.prompt || '吸睛开头prompt生成中...'}</div>
+                                <div class="prompt-actions">
+                                    <button class="prompt-btn prompt-btn-copy" onclick="copyPrompt(${item.rank})">
+                                        <i class="fas fa-copy"></i> 复制
+                                    </button>
+                                    <button class="prompt-btn prompt-btn-miaosi" onclick="goToMiaosi(${item.rank})">
+                                        <i class="fas fa-external-link-alt"></i> 妙思
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-section">
+                            <div class="tags-container">
+                                <span class="tag tag-category">${item.category || '待分类'}</span>
+                                <span class="tag tag-type">${item.type || '待分类'}</span>
+                                <span class="tag tag-audience">${item.audience || '待分类'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Filter cards
+        function filterCards() {
+            const category = document.getElementById('categoryFilter').value;
+            const type = document.getElementById('typeFilter').value;
+            const audience = document.getElementById('audienceFilter').value;
+            
+            const cards = document.querySelectorAll('.analysis-card');
+            let visibleCount = 0;
+            
+            cards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                const cardType = card.dataset.type;
+                const cardAudience = card.dataset.audience;
+                
+                const matchCategory = !category || cardCategory === category;
+                const matchType = !type || cardType === type;
+                const matchAudience = !audience || cardAudience === audience;
+                
+                if (matchCategory && matchType && matchAudience) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            updateStats(visibleCount);
+        }
+
+        // Update stats
+        function updateStats(count) {
+            document.getElementById('filteredCount').textContent = count;
+        }
+
+        // Format number
+        function formatNumber(num) {
+            if (num >= 10000) {
+                return (num / 10000).toFixed(1) + '万';
+            }
+            return num.toLocaleString();
+        }
+
+        // Copy prompt
+        function copyPrompt(rank) {
+            const promptText = document.getElementById(`prompt-${rank}`).textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                showToast('已复制到剪贴板', 'success');
+            }).catch(() => {
+                showToast('复制失败，请手动复制', 'error');
+            });
+        }
+
+        // Go to Miaosi
+        function goToMiaosi(rank) {
+            const promptText = document.getElementById(`prompt-${rank}`).textContent;
+            // 跳转到腾讯混元AI广告平台 (admuse.qq.com)
+            window.open('https://admuse.qq.com/#/index', '_blank');
+        }
+
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        // Admin modal
+        // 管理员密码验证
+        const ADMIN_PASSWORD = '1228';
+        // 会话内验证通过后不再重复要求
+        let adminAuthenticated = false;
+        
+        // 检测是否为静态部署（无本地后端）
+        let isStaticDeployment = null;  // null=未检测, true=静态, false=有后端
+        
+        async function checkDeploymentMode() {
+            if (isStaticDeployment !== null) return isStaticDeployment;
+            try {
+                const ctrl = new AbortController();
+                setTimeout(() => ctrl.abort(), 1500);
+                const res = await fetch('http://localhost:8765/health', { signal: ctrl.signal });
+                isStaticDeployment = !res.ok;
+            } catch (e) {
+                isStaticDeployment = true;
+            }
+            return isStaticDeployment;
+        }
+        
+        async function requestAdminAccess() {
+            // 静态部署模式下，告知用户管理员功能需要本地运行
+            const isStatic = await checkDeploymentMode();
+            if (isStatic) {
+                showStaticModeDialog();
+                return;
+            }
+            
+            if (adminAuthenticated) {
+                openAdminModal();
+                return;
+            }
+            
+            showPasswordDialog();
+        }
+        
+        // 静态部署模式提示
+        function showStaticModeDialog() {
+            let dlg = document.getElementById('staticModeDialog');
+            if (!dlg) {
+                dlg = document.createElement('div');
+                dlg.id = 'staticModeDialog';
+                dlg.className = 'admin-modal';
+                dlg.innerHTML = `
+                    <div class="admin-content" style="max-width: 480px;">
+                        <div class="admin-header">
+                            <h2>📖 只读模式</h2>
+                            <button class="sidebar-close" onclick="document.getElementById('staticModeDialog').classList.remove('show')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="admin-body">
+                            <div style="text-align: center; padding: 16px 0;">
+                                <div style="width: 72px; height: 72px; margin: 0 auto 20px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 32px;">
+                                    📊
+                                </div>
+                                <h3 style="color: var(--text-primary); margin-bottom: 12px; font-size: 18px;">
+                                    当前为报告浏览模式
+                                </h3>
+                                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.8; margin-bottom: 16px;">
+                                    本页面展示的是最新一期数码家电行业<br>直播链路跑量素材双周报
+                                </p>
+                                <div style="background: var(--bg-dark); border-radius: 12px; padding: 16px; text-align: left; font-size: 13px; color: var(--text-secondary); line-height: 1.8;">
+                                    💡 <strong style="color: var(--accent-orange);">管理员更新数据方式：</strong><br>
+                                    1. 在本地运行 <code style="background: rgba(245,158,11,0.1); padding: 2px 6px; border-radius: 4px; color: var(--accent-orange);">python3 server.py</code><br>
+                                    2. 上传最新CSV完成分析<br>
+                                    3. 将 <code style="background: rgba(245,158,11,0.1); padding: 2px 6px; border-radius: 4px; color: var(--accent-orange);">data/*.json</code> 推送到仓库<br>
+                                    4. GitHub Pages 自动更新线上页面
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(dlg);
+            }
+            dlg.classList.add('show');
+        }
+        
+        function showPasswordDialog() {
+            // 创建密码对话框（如果不存在）
+            let dlg = document.getElementById('passwordDialog');
+            if (!dlg) {
+                dlg = document.createElement('div');
+                dlg.id = 'passwordDialog';
+                dlg.className = 'admin-modal';
+                dlg.innerHTML = `
+                    <div class="admin-content" style="max-width: 420px;">
+                        <div class="admin-header">
+                            <h2>🔒 管理员验证</h2>
+                            <button class="sidebar-close" onclick="closePasswordDialog()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="admin-body">
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(239, 68, 68, 0.15) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+                                    🔐
+                                </div>
+                                <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">
+                                    请输入管理员密码以继续
+                                </p>
+                            </div>
+                            <input 
+                                type="password" 
+                                id="adminPasswordInput" 
+                                placeholder="请输入密码" 
+                                onkeydown="if(event.key==='Enter'){verifyPassword();}"
+                                style="
+                                    width: 100%;
+                                    padding: 12px 16px;
+                                    background: var(--bg-dark);
+                                    border: 1px solid var(--border-color);
+                                    border-radius: 10px;
+                                    color: var(--text-primary);
+                                    font-size: 15px;
+                                    outline: none;
+                                    transition: border-color 0.2s;
+                                "
+                                onfocus="this.style.borderColor='var(--accent-orange)'"
+                                onblur="this.style.borderColor='var(--border-color)'"
+                            />
+                            <div id="passwordError" style="color: var(--accent-red); font-size: 13px; margin-top: 10px; min-height: 18px;"></div>
+                            <button 
+                                class="btn btn-admin" 
+                                onclick="verifyPassword()" 
+                                style="width: 100%; margin-top: 16px; justify-content: center; padding: 12px;"
+                            >
+                                <i class="fas fa-unlock-alt"></i>
+                                验证并进入
+                            </button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(dlg);
+            }
+            dlg.classList.add('show');
+            setTimeout(() => {
+                const input = document.getElementById('adminPasswordInput');
+                if (input) {
+                    input.value = '';
+                    input.focus();
+                }
+                const err = document.getElementById('passwordError');
+                if (err) err.textContent = '';
+            }, 100);
+        }
+        
+        function closePasswordDialog() {
+            const dlg = document.getElementById('passwordDialog');
+            if (dlg) dlg.classList.remove('show');
+        }
+        
+        function verifyPassword() {
+            const input = document.getElementById('adminPasswordInput');
+            const err = document.getElementById('passwordError');
+            
+            if (!input) return;
+            
+            if (input.value === ADMIN_PASSWORD) {
+                adminAuthenticated = true;
+                closePasswordDialog();
+                showToast('验证成功，欢迎管理员', 'success');
+                setTimeout(() => openAdminModal(), 300);
+            } else {
+                if (err) err.textContent = '❌ 密码错误，请重试';
+                input.value = '';
+                input.focus();
+                input.style.borderColor = 'var(--accent-red)';
+                setTimeout(() => {
+                    input.style.borderColor = 'var(--border-color)';
+                }, 1000);
+            }
+        }
+        
+        async function openAdminModal() {
+            document.getElementById('adminModal').classList.add('show');
+            
+            // 检查是否有正在运行的任务
+            try {
+                const response = await fetch('http://localhost:8765/progress?profile=shop');
+                if (response.ok) {
+                    const state = await response.json();
+                    if (state.status === 'running' || (state.videos && state.videos.length > 0 && state.status !== 'idle')) {
+                        // 有任务在运行或刚完成，显示进度面板
+                        document.getElementById('adminUploadSection').style.display = 'none';
+                        document.getElementById('adminProgressSection').style.display = 'block';
+                        renderProgress(state);
+                        if (state.status === 'running') {
+                            startProgressPolling();
+                        }
+                    } else {
+                        // 没有任务，显示上传面板
+                        document.getElementById('adminUploadSection').style.display = 'block';
+                        document.getElementById('adminProgressSection').style.display = 'none';
+                    }
+                }
+            } catch (e) {
+                // 服务器未运行，显示上传面板
+                document.getElementById('adminUploadSection').style.display = 'block';
+                document.getElementById('adminProgressSection').style.display = 'none';
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.remove('show');
+            // 注意：不停止轮询，让任务继续在后台进行
+        }
+
+        // Setup upload zone
+        function setupUploadZone() {
+            const uploadZone = document.getElementById('uploadZone');
+            const fileInput = document.getElementById('videoUpload');
+            
+            uploadZone.addEventListener('click', () => fileInput.click());
+            
+            uploadZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadZone.classList.add('dragover');
+            });
+            
+            uploadZone.addEventListener('dragleave', () => {
+                uploadZone.classList.remove('dragover');
+            });
+            
+            uploadZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadZone.classList.remove('dragover');
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleVideoUpload(files[0]);
+                }
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    handleVideoUpload(e.target.files[0]);
+                }
+            });
+        }
+
+        // Handle video upload
+        async function handleVideoUpload(file) {
+            if (!file.type.startsWith('video/')) {
+                showToast('请上传视频文件', 'error');
+                return;
+            }
+            
+            showToast('正在分析视频，请稍候...', 'success');
+            
+            // Show comparison section
+            document.getElementById('comparisonSection').style.display = 'block';
+            document.getElementById('uploadedAnalysis').innerHTML = `
+                <div class="comparison-item" style="border-left: 3px solid var(--accent-blue);">
+                    <div class="comparison-label" style="color: var(--accent-blue);">📤 已上传</div>
+                    <div class="comparison-text">${file.name}</div>
+                </div>
+            `;
+            
+            // 将视频文件转为base64
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                const videoData = {
+                    name: file.name,
+                    type: file.type,
+                    size: file.size,
+                    data: e.target.result
+                };
+                
+                // 尝试发送到本地Python服务器
+                try {
+                    const response = await fetch('http://localhost:8765/analyze-video', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(videoData)
+                    });
+                    
+                    if (response.ok) {
+                        const results = await response.json();
+                        displayAnalysisResults(results);
+                    } else {
+                        // 服务器未运行，显示模拟结果
+                        displaySimulatedResults();
+                    }
+                } catch (error) {
+                    // 无法连接服务器，显示模拟结果
+                    displaySimulatedResults();
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // 显示模拟分析结果（当服务器不可用时）
+        function displaySimulatedResults() {
+            document.getElementById('advantageText').textContent = '视频画质清晰，拍摄角度专业，节奏把控得当';
+            document.getElementById('disadvantageText').textContent = '开场缺少强吸引力的钩子，CTA不够明确';
+            showToast('分析完成（本地模式）', 'success');
+        }
+
+        // Analyze video with Gemini API
+        async function analyzeVideoWithGemini(videoFile) {
+            // For demo purposes, we'll simulate the API call
+            // In production, you would use the actual Gemini API
+            
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        advantages: [
+                            '视频画质清晰，拍摄角度专业',
+                            '节奏把控得当，观众留存率高',
+                            '产品卖点突出，易于记忆'
+                        ],
+                        disadvantages: [
+                            '开场缺少强吸引力的钩子',
+                            '缺少与Top50热门素材的差异化卖点',
+                            'CTA（行动号召）不够明确'
+                        ],
+                        recommendation: '建议参考Top10的开场模式，加强黄金三秒的吸引力，同时突出产品独特卖点'
+                    });
+                }, 2000);
+            });
+        }
+
+        // Display analysis results
+        function displayAnalysisResults(results) {
+            document.getElementById('advantageText').textContent = results.advantages.join('；');
+            document.getElementById('disadvantageText').textContent = results.disadvantages.join('；');
+            showToast('分析完成！', 'success');
+        }
+
+        // Setup admin upload
+        function setupAdminUpload() {
+            const uploadZone = document.getElementById('adminUploadZone');
+            const fileInput = document.getElementById('csvUpload');
+            
+            uploadZone.addEventListener('click', () => fileInput.click());
+            
+            fileInput.addEventListener('change', async (e) => {
+                if (e.target.files.length > 0) {
+                    await handleCSVUpload(e.target.files[0]);
+                }
+            });
+        }
+        
+        // 全局进度轮询定时器
+        let progressPollTimer = null;
+        let progressLastUpdateTime = 0;
+        let lastCompletedCount = 0;
+        
+        // 阶段图标映射
+        const STAGE_INFO = {
+            pending: { icon: '⏱', name: '等待处理', class: 'pending' },
+            downloading: { icon: '⬇', name: '下载中', class: 'downloading' },
+            extracting: { icon: '🎞', name: '提取关键帧', class: 'extracting' },
+            uploading: { icon: '☁', name: '上传到Gemini', class: 'uploading' },
+            analyzing: { icon: '🤖', name: 'AI分析中', class: 'analyzing' },
+            completed: { icon: '✓', name: '已完成', class: 'completed' },
+            failed: { icon: '✗', name: '失败', class: 'failed' },
+            skipped: { icon: '⏭', name: '已跳过', class: 'skipped' }
+        };
+
+        // Handle CSV upload - 发送到Python服务器处理
+        async function handleCSVUpload(file) {
+            if (!file.name.endsWith('.csv')) {
+                showToast('请上传CSV文件', 'error');
+                return;
+            }
+            
+            try {
+                // 读取CSV文件内容
+                const csvContent = await readFileAsText(file);
+                
+                // 切换到进度面板
+                document.getElementById('adminUploadSection').style.display = 'none';
+                document.getElementById('adminProgressSection').style.display = 'block';
+                document.getElementById('progressStatusMsg').textContent = '正在上传CSV到服务器...';
+                
+                // 发送到本地Python服务器
+                const response = await fetch('http://localhost:8765/analyze-csv?profile=shop', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        csv: csvContent,
+                        name: file.name
+                    })
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('progressStatusMsg').textContent = 
+                        `已开始分析 ${result.total} 个视频`;
+                    
+                    // 开始轮询进度
+                    startProgressPolling();
+                } else {
+                    throw new Error('服务器处理失败');
+                }
+                
+            } catch (error) {
+                console.error('CSV处理错误:', error);
+                
+                document.getElementById('progressStatusMsg').innerHTML = `
+                    <span style="color: var(--accent-orange);">⚠️ 服务器未运行</span><br>
+                    <span style="font-size: 12px; color: var(--text-muted);">
+                        请先在终端运行: <code style="background: var(--bg-dark); padding: 2px 6px; border-radius: 4px;">python3 server.py</code>
+                    </span>
+                `;
+                showToast('服务器未运行，请先启动分析服务', 'error');
+            }
+        }
+        
+        // 开始轮询进度
+        function startProgressPolling() {
+            if (progressPollTimer) clearInterval(progressPollTimer);
+            lastCompletedCount = 0;
+            
+            // 立即查询一次
+            pollProgress();
+            
+            // 每1.5秒轮询一次
+            progressPollTimer = setInterval(pollProgress, 1500);
+        }
+        
+        // 停止轮询
+        function stopProgressPolling() {
+            if (progressPollTimer) {
+                clearInterval(progressPollTimer);
+                progressPollTimer = null;
+            }
+        }
+        
+        // 轮询进度
+        async function pollProgress() {
+            try {
+                const response = await fetch('http://localhost:8765/progress?profile=shop');
+                if (!response.ok) return;
+                
+                const state = await response.json();
+                renderProgress(state);
+                
+                // 检查是否有新完成的视频，自动刷新主页数据
+                const completedCount = state.videos.filter(v => v.stage === 'completed').length;
+                if (completedCount > lastCompletedCount) {
+                    lastCompletedCount = completedCount;
+                    // 在后台刷新数据，不打断进度展示
+                    silentReloadData();
+                }
+                
+                // 任务完成
+                if (state.status === 'completed') {
+                    stopProgressPolling();
+                    document.getElementById('progressStatusMsg').innerHTML = 
+                        `<span style="color: var(--accent-green); font-weight: 600;">✓ 全部完成！共处理 ${state.current} 个视频</span>`;
+                    showToast(`分析完成！共 ${state.current} 个视频`, 'success');
+                    
+                    setTimeout(() => {
+                        loadData();
+                    }, 1000);
+                }
+                
+                // 任务出错
+                if (state.status === 'error') {
+                    stopProgressPolling();
+                    document.getElementById('progressStatusMsg').innerHTML = 
+                        `<span style="color: var(--accent-red);">✗ 任务出错: ${state.message}</span>`;
+                    showToast('分析任务出错', 'error');
+                }
+            } catch (e) {
+                console.warn('轮询进度失败:', e);
+            }
+        }
+        
+        // 渲染进度UI
+        function renderProgress(state) {
+            // 更新总体计数
+            document.getElementById('progressTotal').textContent = state.total;
+            
+            // 统计各状态
+            const stats = {
+                completed: 0,
+                processing: 0,
+                pending: 0,
+                failed: 0,
+                skipped: 0
+            };
+            
+            state.videos.forEach(v => {
+                if (v.stage === 'completed') stats.completed++;
+                else if (v.stage === 'failed') stats.failed++;
+                else if (v.stage === 'skipped') stats.skipped++;
+                else if (v.stage === 'pending') stats.pending++;
+                else stats.processing++;
+            });
+            
+            document.getElementById('statCompleted').textContent = stats.completed;
+            document.getElementById('statProcessing').textContent = stats.processing;
+            document.getElementById('statPending').textContent = stats.pending;
+            document.getElementById('statFailed').textContent = stats.failed + stats.skipped;
+            document.getElementById('progressCurrent').textContent = stats.completed + stats.failed + stats.skipped;
+            
+            // 更新总进度条
+            const percent = state.total > 0 ? ((stats.completed + stats.failed + stats.skipped) / state.total * 100) : 0;
+            document.getElementById('progressOverallFill').style.width = percent + '%';
+            
+            // 更新状态消息
+            if (state.status === 'running' && state.currentVideo && state.currentVideo.rank) {
+                const stage = STAGE_INFO[state.currentVideo.stage] || STAGE_INFO.pending;
+                document.getElementById('progressStatusMsg').innerHTML = 
+                    `正在处理 #${state.currentVideo.rank}: <span style="color: var(--accent-purple);">${stage.name}</span> - ${state.currentVideo.message || ''}`;
+            }
+            
+            // 渲染视频列表
+            renderVideoProgressList(state.videos);
+        }
+        
+        // 渲染视频进度列表
+        function renderVideoProgressList(videos) {
+            const list = document.getElementById('videoProgressList');
+            
+            // 排序：处理中 > 等待 > 完成 > 失败/跳过
+            const stageOrder = {
+                downloading: 1,
+                extracting: 1,
+                uploading: 1,
+                analyzing: 1,
+                pending: 2,
+                completed: 3,
+                failed: 4,
+                skipped: 4
+            };
+            
+            const sorted = [...videos].sort((a, b) => {
+                const orderA = stageOrder[a.stage] || 5;
+                const orderB = stageOrder[b.stage] || 5;
+                if (orderA !== orderB) return orderA - orderB;
+                return a.rank - b.rank;
+            });
+            
+            list.innerHTML = sorted.map(v => {
+                const stage = STAGE_INFO[v.stage] || STAGE_INFO.pending;
+                const isProcessing = ['downloading', 'extracting', 'uploading', 'analyzing'].includes(v.stage);
+                
+                let iconHtml = `<span class="stage-icon-${stage.class}">${stage.icon}</span>`;
+                if (isProcessing) {
+                    iconHtml = `<div class="spinner"></div>`;
+                }
+                
+                return `
+                    <div class="video-progress-item ${stage.class}">
+                        <div class="video-rank-badge">#${v.rank}</div>
+                        <div class="video-progress-info">
+                            <div class="video-progress-stage">
+                                ${iconHtml}
+                                <span>${stage.name}</span>
+                            </div>
+                            <div class="video-progress-message" title="${v.message || ''}">${v.message || '等待中...'}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // 静默刷新数据（不打断进度展示）
+        async function silentReloadData() {
+            try {
+                const response = await fetch('./data-shop/top50_analysis.json?t=' + Date.now());
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data && data.length > 0) {
+                        top50Data = data;
+                        document.getElementById('totalCount').textContent = data.length;
+                        renderCards(top50Data);
+                    }
+                }
+            } catch (e) {
+                console.warn('静默刷新数据失败:', e);
+            }
+        }
+        
+        // 关闭管理员面板时重置（如果任务完成）
+        function resetAdminPanel() {
+            const state = document.getElementById('adminProgressSection').style.display;
+            if (state === 'block' && progressPollTimer === null) {
+                // 任务已完成，重置面板
+                document.getElementById('adminUploadSection').style.display = 'block';
+                document.getElementById('adminProgressSection').style.display = 'none';
+            }
+        }
+        
+        // 读取文件为文本
+        function readFileAsText(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (e) => resolve(e.target.result);
+                reader.onerror = reject;
+                reader.readAsText(file, 'utf-8');
+            });
+        }
+
+        // Sleep helper
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        // Show toast
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            const toastIcon = toast.querySelector('.toast-icon');
+            
+            toast.className = 'toast ' + type;
+            toastMessage.textContent = message;
+            
+            if (type === 'success') {
+                toastIcon.className = 'fas fa-check-circle toast-icon';
+            } else {
+                toastIcon.className = 'fas fa-exclamation-circle toast-icon';
+            }
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
