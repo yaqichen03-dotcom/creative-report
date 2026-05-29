@@ -2075,10 +2075,14 @@
             // 视频播放器 - 直接使用原视频URL，默认显示第1秒画面
             let videoHtml = '';
             if (item.videoUrl && item.videoUrl !== '#') {
+                // 强制 http → https，避免 GitHub Pages (HTTPS) 阻止 HTTP 资源
+                let videoUrl = item.videoUrl.startsWith('http://') 
+                    ? 'https://' + item.videoUrl.slice(7) 
+                    : item.videoUrl;
                 // 在URL末尾追加 #t=1 让视频自动定位到第1秒（媒体片段URI）
-                const videoUrlWithTime = item.videoUrl.includes('#') 
-                    ? item.videoUrl 
-                    : item.videoUrl + '#t=1';
+                const videoUrlWithTime = videoUrl.includes('#') 
+                    ? videoUrl 
+                    : videoUrl + '#t=1';
                 videoHtml = `
                     <video 
                         controls 
