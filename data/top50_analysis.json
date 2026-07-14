@@ -415,35 +415,6 @@
     "period": "近期"
   },
   {
-    "rank": 16,
-    "title": "旅途衣物烘干神器，轻装出游无忧",
-    "category": "生活小电",
-    "type": "产品展示",
-    "audience": "年轻人",
-    "cost": 10.975086658,
-    "ctr": 2.339454664390446,
-    "slip3s": 40.069507215659385,
-    "cvr": 5.4627293186933095,
-    "videoUrl": "https://adsmind.gdtimg.com/ads_svp_video__0b53kqaykaab4uaao6gckvuruvaeqvkadbka.f0.mp4?dis_k=10e932e36d2a8e430ba3c3dbf51261bd&dis_t=1776757376&m=02a2212545f8fb93f42048d6b6b538d7&sha256=245a4516b03d140c7f86d4ca1f2afee250840f6a15540b82012c6f44c0f40e90",
-    "thumbnail": "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-    "golden3s": "视频开篇通过对比繁忙机场中拖带大量行李的人群与仅背小背包的旅行者，配合字幕“为什么同样是旅行，有人背个小背包”，迅速制造悬念和痛点，吸引关注。",
-    "structure": [
-      "痛点引入与悬念设置",
-      "产品展示与功能介绍",
-      "使用场景与细节演示",
-      "便携性与用户体验",
-      "总结与号召"
-    ],
-    "keyPoints": "便携小巧、自立支架、烘干衣物量大、静音运行、快速烘干、柔和护衣、收纳方便",
-    "prompt": "开头3秒内：首先是一个机场航站楼的广角镜头，人潮涌动，人们拖着大小各异的行李箱，画面色调明亮，运镜快速而有冲击力。紧接着平滑切换到一位年轻女性的背影，她穿着休闲装，轻松地背着一个轻便的紫色小背包，步伐轻盈地走在装修现代的酒店大堂。画面下方同时出现字幕钩子：“为什么同样是旅行，有人背个小背包？” 整体画面节奏从忙碌到轻松，色彩鲜明，营造出对比和好奇感。",
-    "frames": [
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_1.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_2.jpg"
-    ],
-    "period": "近期"
-  },
-  {
     "rank": 17,
     "title": "随身WiFi，流量大、按需充，手机上网充电两不误",
     "category": "其他",
@@ -1366,35 +1337,6 @@
     "period": "近期"
   },
   {
-    "rank": 48,
-    "title": "旅行神器！衣服烘干杀菌，小巧便携",
-    "category": "生活小电",
-    "type": "种草安利",
-    "audience": "年轻人",
-    "cost": 5.15808937,
-    "ctr": 2.953243249905796,
-    "slip3s": 57.943800483022805,
-    "cvr": 6.868590507989507,
-    "videoUrl": "https://adsmind.gdtimg.com/ads_svp_video__0b53iuancaaagiaocbi6kvvburie2fcqbuka.f0.mp4?dis_k=d66b5189658520526e83e97b640e6172&dis_t=1780363409&m=bd2b8dde21138c0feaab0fcaf4effd2e&sha256=e5f9079ce561c4722285f6106c12746e39d01c21f1827e44023dcdaaf08ef88c",
-    "thumbnail": "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-    "golden3s": "画面快速切换展示产品，配合“这才是我们年轻人出门旅游最该带的实用好物”的文案，直接点出产品价值。",
-    "structure": [
-      "引入年轻人旅游痛点",
-      "展示产品外观与功能",
-      "演示烘干衣物效果",
-      "强调便携性与安全性",
-      "对比价格并推荐"
-    ],
-    "keyPoints": "小巧便携、烘干杀菌、容量大、全球电压通用、价格实惠",
-    "prompt": "开头3秒内：一个年轻女性自信地展示一个白色便携式烘干器，镜头从产品全身特写快速切换到她手指的动作，配合屏幕下方醒目的中文标题“这才是我们年轻人出门旅游最该带的实用好物”。色调明亮，节奏明快，运镜流畅，营造出一种时尚、实用的氛围。",
-    "frames": [
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_1.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_2.jpg"
-    ],
-    "period": "近期"
-  },
-  {
     "rank": 49,
     "title": "钻石微压锅：多功能不溢锅不粘底，好用又实惠",
     "category": "厨房小电",
@@ -1741,36 +1683,6 @@
     ],
     "keyPoints": "一机多用、1200W大功率、快速出蒸汽、智能恒温、不伤衣、不挑面料、双边美人尖、小巧便携、售后无忧",
     "prompt": "开头3秒内，画面从极度皱巴巴的白色衬衫特写开始，运镜缓慢平移，展现手持式浅蓝色海尔挂烫机在衬衫上快速熨烫，褶皱瞬间消失。画面色调明亮，节奏感快，突出前后对比效果。字幕或台词钩子为“海尔这是疯了吗？”",
-    "frames": [
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_1.jpg",
-      "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_2.jpg"
-    ],
-    "period": "历史"
-  },
-  {
-    "rank": 61,
-    "title": "旅行好物：便携超薄烘干机",
-    "category": "生活小电",
-    "type": "种草安利",
-    "audience": "年轻人、上班族",
-    "cost": 8,
-    "ctr": 3.662399212,
-    "slip3s": 37.16711765,
-    "cvr": 4.356181935,
-    "videoUrl": "https://adsmind.gdtimg.com/ads_svp_video__0bc3vyabuaaaeaaalxzlvrurxlqedkxaagsa.f0.mp4?dis_k=91f8def7c30c1a06453b63e5132f1040&dis_t=1765275009&m=b7b88713385c8636d71fbf07f7e561a2&sha256=0726f516b28567dbb4a7180d7fd48bdbc5def6c59552ebfbd50d2498cb4078a3",
-    "thumbnail": "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
-    "golden3s": "视频开头，一对年轻夫妻拖着行李箱疲惫地走进酒店房间，文案“和老公出门旅游累了一天了”，直观展现了旅行中身体的疲惫，为后续解决痛点埋下伏笔。",
-    "structure": [
-      "痛点引入",
-      "旧方法困扰",
-      "产品展示",
-      "功能演示",
-      "效果展示",
-      "收纳与便携性"
-    ],
-    "keyPoints": "超薄便携、免挂式设计、快速烘干、配件一体收纳、干爽舒适",
-    "prompt": "开头3-5秒内：温馨的酒店房间，柔和光线。一对年轻夫妻（男士戴帽子，女士推粉色行李箱），面露疲惫地走进房间。镜头平稳，中景展现两人进门并略显倦怠的状态。画面底部出现字幕：‘和老公出门旅游累了一天了’，营造出旅途辛劳的氛围，为即将出现的产品解决方案做铺垫。",
     "frames": [
       "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_0.jpg",
       "/Users/yancychen/WorkBuddy/2026-05-07-task-3/data/screenshots/frame_1.jpg",
