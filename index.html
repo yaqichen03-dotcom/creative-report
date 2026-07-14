@@ -807,6 +807,28 @@
             color: var(--accent-orange);
         }
         
+        /* 近期/历史标签 */
+        .period-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .period-recent {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+        .period-history {
+            background: rgba(108, 108, 124, 0.2);
+            color: #8c8c9c;
+        }
+        .card-history {
+            opacity: 0.85;
+        }
+        
         /* 指标徽章栏（CTR + 3s快滑率） */
         .metrics-bar {
             display: flex;
@@ -1462,6 +1484,14 @@
         </div>
         <div class="filter-bar">
             <div class="filter-group">
+                <span class="filter-label"><i class="fas fa-clock"></i> 时间范围</span>
+                <select class="filter-select" id="periodFilter" onchange="filterCards()">
+                    <option value="">全部</option>
+                    <option value="近期" selected>近期Top</option>
+                    <option value="历史">历史</option>
+                </select>
+            </div>
+            <div class="filter-group">
                 <span class="filter-label"><i class="fas fa-folder"></i> 商品类目</span>
                 <select class="filter-select" id="categoryFilter" onchange="filterCards()">
                     <option value="">全部类目</option>
@@ -1865,8 +1895,13 @@
         function renderCards(data) {
             const grid = document.getElementById('analysisGrid');
             
-            // 按rank排序，并重新分配连续序号（使界面上的编号始终从1开始连续）
-            const sortedData = [...data].sort((a, b) => (a.rank || 0) - (b.rank || 0));
+            // 先按period分组（近期在前），再按rank排序
+            const sortedData = [...data].sort((a, b) => {
+                const pa = a.period === '历史' ? 1 : 0;
+                const pb = b.period === '历史' ? 1 : 0;
+                if (pa !== pb) return pa - pb;
+                return (a.rank || 0) - (b.rank || 0);
+            });
             sortedData.forEach((item, idx) => {
                 item.displayRank = idx + 1;  // 用于展示的连续序号
             });
@@ -2121,12 +2156,12 @@
             const slip3sValue = item.slip3s ? Number(item.slip3s).toFixed(2) : '-';
 
             return `
-                <article class="analysis-card" data-category="${item.category || '待分类'}" data-type="${item.type || '待分类'}" data-audience="${item.audience || '待分类'}">
+                <article class="analysis-card ${item.period === '历史' ? 'card-history' : ''}" data-category="${item.category || '待分类'}" data-type="${item.type || '待分类'}" data-audience="${item.audience || '待分类'}" data-period="${item.period || '近期'}">
                     <div class="card-header">
                         <div class="card-rank">
                             <div class="rank-badge">${item.displayRank || item.rank || 0}</div>
                             <div class="card-info">
-                                <h3>${item.title || '素材' + (item.displayRank || item.rank)}</h3>
+                                <h3>${item.title || '素材' + (item.displayRank || item.rank)} ${item.period === '历史' ? '<span class="period-tag period-history">历史</span>' : '<span class="period-tag period-recent">近期</span>'}</h3>
                                 <div class="card-meta">
                                     <span><i class="fas fa-tag"></i> ${item.category || '待分类'}</span>
                                     <span><i class="fas fa-play-circle"></i> ${item.type || '待分类'}</span>
@@ -2215,6 +2250,7 @@
 
         // Filter cards
         function filterCards() {
+            const period = document.getElementById('periodFilter').value;
             const category = document.getElementById('categoryFilter').value;
             const type = document.getElementById('typeFilter').value;
             const audience = document.getElementById('audienceFilter').value;
@@ -2223,15 +2259,17 @@
             let visibleCount = 0;
             
             cards.forEach(card => {
+                const cardPeriod = card.dataset.period;
                 const cardCategory = card.dataset.category;
                 const cardType = card.dataset.type;
                 const cardAudience = card.dataset.audience;
                 
+                const matchPeriod = !period || cardPeriod === period;
                 const matchCategory = !category || cardCategory === category;
                 const matchType = !type || cardType === type;
                 const matchAudience = !audience || cardAudience === audience;
                 
-                if (matchCategory && matchType && matchAudience) {
+                if (matchPeriod && matchCategory && matchType && matchAudience) {
                     card.style.display = 'block';
                     visibleCount++;
                 } else {
