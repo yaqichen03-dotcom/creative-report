@@ -1795,7 +1795,7 @@
         // 加载数据 - 优先从本地JSON读取，否则显示引导上传提示
         async function loadData() {
             try {
-                const response = await fetch('./data-shop/top50_analysis.json', {
+                const response = await fetch('./data-shop/top50_analysis.json?t=' + Date.now(), {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' }
                 });
